@@ -1,0 +1,306 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RCD_Graphics</name>
+    </assembly>
+    <members>
+        <member name="T:RCD_Graphics.RCD_Color">
+            <summary>
+            Contains the color system.
+            </summary>
+        </member>
+        <member name="F:RCD_Graphics.RCD_Color.d_red">
+            <summary>
+            Returns the default red color
+            </summary>
+        </member>
+        <member name="F:RCD_Graphics.RCD_Color.d_green">
+            <summary>
+            Returns the default green
+            </summary>
+        </member>
+        <member name="F:RCD_Graphics.RCD_Color.d_blue">
+            <summary>
+            Returns the default blue
+            </summary>
+        </member>
+        <member name="F:RCD_Graphics.RCD_Color.d_yellow">
+            <summary>
+            Returns the default yellow
+            </summary>
+        </member>
+        <member name="F:RCD_Graphics.RCD_Color.d_orange">
+            <summary>
+            The d_orange.
+            </summary>
+        </member>
+        <member name="F:RCD_Graphics.RCD_Color.d_magenta">
+            <summary>
+            The d_magenta.
+            </summary>
+        </member>
+        <member name="F:RCD_Graphics.RCD_Color.d_purple">
+            <summary>
+            The d_purple.
+            </summary>
+        </member>
+        <member name="F:RCD_Graphics.RCD_Color.d_cyan">
+            <summary>
+            The d_cyan.
+            </summary>
+        </member>
+        <member name="F:RCD_Graphics.RCD_Color.d_black">
+            <summary>
+            The d_black.
+            </summary>
+        </member>
+        <member name="F:RCD_Graphics.RCD_Color.d_white">
+            <summary>
+            The d_white.
+            </summary>
+        </member>
+        <member name="F:RCD_Graphics.RCD_Color.d_gray">
+            <summary>
+            The d_gray.
+            </summary>
+        </member>
+        <member name="F:RCD_Graphics.RCD_Color.d_transparent">
+            <summary>
+            The d_transparent.
+            </summary>
+        </member>
+        <member name="F:RCD_Graphics.RCD_Color.c_lucy">
+            <summary>
+            The c_lucy.
+            </summary>
+        </member>
+        <member name="F:RCD_Graphics.RCD_Color.c_elliot">
+            <summary>
+            The c_elliot.
+            </summary>
+        </member>
+        <member name="F:RCD_Graphics.RCD_Color.c_dan">
+            <summary>
+            The c_dan.
+            </summary>
+        </member>
+        <member name="F:RCD_Graphics.RCD_Color.c_shrek">
+            <summary>
+            The c_shrek.
+            </summary>
+        </member>
+        <member name="F:RCD_Graphics.RCD_Color.R">
+            <summary>
+            The red byte.
+            </summary>
+        </member>
+        <member name="F:RCD_Graphics.RCD_Color.G">
+            <summary>
+            The green byte.
+            </summary>
+        </member>
+        <member name="F:RCD_Graphics.RCD_Color.B">
+            <summary>
+            The blue byte.
+            </summary>
+        </member>
+        <member name="F:RCD_Graphics.RCD_Color.A">
+            <summary>
+            The alpha byte.
+            </summary>
+        </member>
+        <member name="P:RCD_Graphics.RCD_Color.Hue">
+            <summary>
+            Gets or sets the hue.
+            </summary>
+            <value>
+            a double rangeing from 0-360
+            </value>
+        </member>
+        <member name="P:RCD_Graphics.RCD_Color.Sat">
+            <summary>
+            Gets or sets the sat.
+            </summary>
+            <value>
+            a double rangeing from 0-1
+            </value>
+        </member>
+        <member name="P:RCD_Graphics.RCD_Color.Val">
+            <summary>
+            Gets or sets the value.
+            </summary>
+            <value>
+            A double rangeing from 0-1
+            </value>
+        </member>
+        <member name="M:RCD_Graphics.RCD_Color.FromHSV(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Froms the HS.
+            </summary>
+            <returns>
+            The HS.
+            </returns>
+            <param name="hue">
+            Hue.
+            </param>
+            <param name="sat">
+            Sat.
+            </param>
+            <param name="value">
+            Value.
+            </param>
+            <param name="alpha">
+            Alpha.
+            </param>
+        </member>
+        <member name="M:RCD_Graphics.RCD_Color.FromHSV(System.Double,System.Double,System.Double)">
+            <summary>
+            Froms the HS.
+            </summary>
+            <returns>
+            The HS.
+            </returns>
+            <param name="hue">
+            Hue.
+            </param>
+            <param name="sat">
+            Sat.
+            </param>
+            <param name="value">
+            Value.
+            </param>
+        </member>
+        <member name="M:RCD_Graphics.RCD_Color.FromHSV(System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Froms the HS.
+            </summary>
+            <returns>
+            The HS.
+            </returns>
+            <param name="hue">
+            Hue.
+            </param>
+            <param name="sat">
+            Sat.
+            </param>
+            <param name="value">
+            Value.
+            </param>
+            <param name="alpha">
+            Alpha.
+            </param>
+        </member>
+        <member name="M:RCD_Graphics.RCD_Color.FromHSV(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Froms the HS.
+            </summary>
+            <returns>
+            The HS.
+            </returns>
+            <param name="hue">
+            Hue.
+            </param>
+            <param name="sat">
+            Sat.
+            </param>
+            <param name="value">
+            Value.
+            </param>
+        </member>
+        <member name="M:RCD_Graphics.RCD_Color.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:RCD_Graphics.RCD_Color" /> class.
+            </summary>
+        </member>
+        <member name="M:RCD_Graphics.RCD_Color.#ctor(System.Byte,System.Byte,System.Byte,System.Byte)">
+            <summary>
+            Initializes a new instance of the <see cref="T:RCD_Graphics.RCD_Color" /> class.
+            </summary>
+            <param name="r">
+            R.
+            </param>
+            <param name="g">
+            G.
+            </param>
+            <param name="b">
+            B.
+            </param>
+            <param name="a">
+            A.
+            </param>
+        </member>
+        <member name="M:RCD_Graphics.RCD_Color.#ctor(System.Drawing.Color)">
+            <summary>
+            Initializes a new instance of the <see cref="T:RCD_Graphics.RCD_Color" /> class.
+            </summary>
+            <param name="GDI">
+            GDI.
+            </param>
+        </member>
+        <member name="M:RCD_Graphics.RCD_Color.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:RCD_Graphics.RCD_Color" /> class.
+            </summary>
+            <param name="code">
+            Code.
+            </param>
+            <param name="format">
+            Format.
+            </param>
+        </member>
+        <member name="M:RCD_Graphics.RCD_Color.ToHexCode(System.Boolean)">
+            <summary>
+            To the hex code.
+            </summary>
+            <returns>
+            The hex code.
+            </returns>
+            <param name="include_alpha">
+            Include_alpha.
+            </param>
+        </member>
+        <member name="M:RCD_Graphics.RCD_Color.ToBinCode(System.Boolean)">
+            <summary>
+            To the bin code.
+            </summary>
+            <returns>
+            The bin code.
+            </returns>
+            <param name="include_alpha">
+            Include_alpha.
+            </param>
+        </member>
+        <member name="M:RCD_Graphics.RCD_Color.ToDecCode(System.Boolean)">
+            <summary>
+            To the dec code.
+            </summary>
+            <returns>
+            The dec code.
+            </returns>
+            <param name="include_alpha">
+            Include_alpha.
+            </param>
+        </member>
+        <member name="M:RCD_Graphics.RCD_Color.ToString">
+            <summary>
+            Returns a <see cref="T:System.String" /> that represents the current <see cref="T:RCD_Graphics.RCD_Color" />.
+            </summary>
+            <returns>
+            A <see cref="T:System.String" /> that represents the current <see cref="T:RCD_Graphics.RCD_Color" />.
+            </returns>
+        </member>
+        <member name="M:RCD_Graphics.RCD_Color.ToGDI">
+            <summary>
+            Tos the GD.
+            </summary>
+            <returns>
+            The GD.
+            </returns>
+        </member>
+        <member name="M:RCD_Graphics.RCD_Color.Invert">
+            <summary>
+            Invert this instance.
+            </summary>
+        </member>
+    </members>
+</doc>

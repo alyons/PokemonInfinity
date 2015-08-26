@@ -1,0 +1,23 @@
+Version 1.0.1
+Save crashing bug
+Fixed some multiple Forms
+Special mega evolution messages are definable in multiple forms (i.e. Mega Rayquaza)
+Incinerate bug
+Curse bug
+Added gen 6 cries in
+Telepathy bug
+Fixed Glalite spelling
+Fixed some description errors for items
+Fixed Manectric spelling in Multiple Forms
+Fixed Illusion error, and Illusion cries
+Fixed Sucker Punch
+Fixed Me First
+Fixed multi-hit moves not canceling if falling asleep during
+Fixed Nuzzle (was using wrong move effect code)
+Fixed thing in battle order causing item use to skip turns
+Fixed error involving Primal Evos fainting
+Fixed Simple's display message
+I think Contrary is 100% correct now
+Fixed a few moves that were not displaying the text/animation for stat lowering
+Fixed order of attacking (there was a typo that would cause ordering to be random a lot of times)
+Fixed Fire not resisting Fairy
