@@ -6,29 +6,27 @@
 2,West,0,66,East,0
 # Cedolan City (7) - Route 6 (44)
 7,West,5,44,East,0
-# Route 1 (32) - Route 6 (44)
-32,West,0,44,East,38
-# Route 21 (43) - Pallet Town (33)
-43,North,0,33,South,4
 # Route 1 (32) - Pallet Town (33)
 32,South,2,33,North,0
+# Route 21 (43) - Pallet Town (33)
+43,North,0,33,South,4
 # Ingido Plateau (35) - Route 4 (39)
 35,West,11,39,East,0
-# Cedolan City (7) - Lerucean Town (23)
-7,East,0,23,West,78
+# Route 7 (47) - Lerucean Town (23)
+47,West,0,23,East,10
 # Route 3 (31) - Lerucean Town (23)
 31,South,32,23,North,0
 # Route 2 (21) - Lerucean Town (23)
 21,East,0,23,West,1
-# Route 7 (47) - Cedolan City (7)
-47,West,0,7,East,0
+# Viridian City (76) - Cedolan City (7)
+76,West,6,7,East,0
 # Route 2 (21) - Cedolan City (7)
-21,South,0,7,North,21
-# Route 1 (32) - Cedolan City (7)
-32,North,0,7,South,0
+21,West,83,7,East,0
 # Route 3 (31) - Ingido Plateau (35)
 31,West,0,35,East,10
 # Route 7 (47) - Battle Frontier (52)
 47,East,8,52,West,0
-# Route 2 (21) - Route 7 (47)
-21,East,77,47,West,0
+# Route 2 (21) - Viridian City (76)
+21,South,0,76,North,0
+# Route 1 (32) - Viridian City (76)
+32,North,0,76,South,6

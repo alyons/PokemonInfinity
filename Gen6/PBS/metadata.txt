@@ -306,3 +306,7 @@ MapPosition=0,12,10
 # Tiall Region
 MapPosition=1,13,16
 Outdoor=true
+[076]
+# Viridian City
+Bicycle=true
+Outdoor=true
