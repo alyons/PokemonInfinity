@@ -189,3 +189,4 @@
 189,DELTASTREAM,Delta Stream,"Affects weather and eliminates all of the Flying type's weaknesses."
 190,PRIMORDIALSEA,Primordial Sea,"Affects weather and nullifies any Fire-type attacks."
 191,DESOLATELAND,Desolate Land,"Affects weather and nullifies any Water-type attacks."
+192,SWORDSMAN,Swordsman,"Boost the power of cutting moves."

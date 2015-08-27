@@ -298,7 +298,7 @@
 298,SMELLINGSALT,Smelling Salts,07C,70,NORMAL,Physical,100,10,0,00,0,abe,"This attack inflicts double damage on a paralyzed foe. It also cures the target's paralysis, however."
 299,SWIFT,Swift,0A5,60,NORMAL,Special,0,20,0,04,0,bef,Star-shaped rays are shot at the opposing team. This attack never misses.
 300,VICEGRIP,Vice Grip,000,55,NORMAL,Physical,100,30,0,00,0,abef,The target is gripped and squeezed from both sides to inflict damage.
-301,CUT,Cut,000,50,NORMAL,Physical,95,30,0,00,0,abef,The target is cut with a scythe or a claw. It can also be used to cut down thin trees.
+301,CUT,Cut,000,70,NORMAL,Physical,95,30,0,00,0,abefn,The target is cut with a scythe or a claw. It can also be used to cut down thin trees. Effective against grass types.
 302,STRUGGLE,Struggle,002,50,NORMAL,Physical,0,1,0,00,0,abf,An attack that is used in desperation only if the user has no PP. It also hurts the user slightly.
 303,TACKLE,Tackle,000,50,NORMAL,Physical,100,35,0,00,0,abef,A physical attack in which the user charges and slams into the target with its whole body.
 304,WEATHERBALL,Weather Ball,087,50,NORMAL,Special,100,10,0,00,0,bef,An attack move that varies in power and type depending on the weather.
