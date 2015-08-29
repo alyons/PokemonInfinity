@@ -310,3 +310,8 @@ Outdoor=true
 # Viridian City
 Bicycle=true
 Outdoor=true
+[079]
+# Route 2
+Bicycle=true
+Outdoor=true
+ShowArea=true

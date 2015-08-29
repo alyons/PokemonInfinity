@@ -1,4 +1,4 @@
-1,REPEL,Repel,1,350,An item that prevents weak wild Pokémon from appearing for 100 steps after its use.,2,0,0,
+﻿1,REPEL,Repel,1,350,An item that prevents weak wild Pokémon from appearing for 100 steps after its use.,2,0,0,
 2,SUPERREPEL,Super Repel,1,500,An item that prevents weak wild Pokémon from appearing for 200 steps after its use.,2,0,0,
 3,MAXREPEL,Max Repel,1,700,An item that prevents weak wild Pokémon from appearing for 250 steps after its use.,2,0,0,
 4,BLACKFLUTE,Black Flute,1,400,A black flute made from blown glass. Its melody makes wild Pokémon less likely to appear.,2,0,0,
@@ -593,4 +593,5 @@
 593,KEEBERRY,Kee Berry,5,20,"If held by a Pokémon, this Berry will increase the Pokémon's Defense stat when hit by a physical attack.",0,0,5,
 594,MARANGABERRY,Maranga Berry,5,20,"If held by a Pokémon, this Berry will increase the Pokémon's Special Defense stat when hit by a special attack.",0,0,5,
 595,SNOWBALL,Snowball,1,200,"An item to be held by a Pokémon. It boosts Attack if hit with an Ice-type attack. It can only be used once.",0,0,0,
-596,SAFETYGOGGLES,Safety Goggles,1,1000,"An item to be held by a Pokémon. These goggles protect the holder from both weather-related damage and powder.",0,0,0
+596,SAFETYGOGGLES,Safety Goggles,1,1000,"An item to be held by a Pokémon. These goggles protect the holder from both weather-related damage and powder.",0,0,0,
+597,OAKSPARCEL,Oak's Parcel,8,0,"A package addressed to Professor Oak.",0,0,0,
