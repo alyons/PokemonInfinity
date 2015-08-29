@@ -1,0 +1,112 @@
+﻿<Window x:Class="PEEditor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:tmd="clr-namespace:TalkerMakerDeluxe"
+        Title="MainWindow" MinWidth="618" MinHeight="360" Width="618" Height="360">
+    <Grid>
+        <StackPanel Orientation="Vertical" Margin="0,0,0,0">
+            <Menu IsMainMenu="True">
+                <MenuItem Header="_File">
+                    <MenuItem Header="_Open..." Click="OpenClick"/>
+                    <MenuItem Header="_Save" Click="SaveClick"/>
+                    <MenuItem Header="Save All" Click="SaveAllClick"/>
+                    <tmd:RecentFileList x:Name="RecentFileList" />
+                    <MenuItem Header="_Exit" />
+                </MenuItem>
+                <MenuItem Header="_Edit" />
+                <MenuItem Header="_Help" />
+            </Menu>
+            <TabControl x:Name="MainTabControl" Margin="0,0,0,0" TabStripPlacement="Left">
+                <TabItem x:Name="AbilityTab" Header="Abilities">
+                    <Grid Background="#FFE5E5E5">
+                        <ListBox x:Name="AbilityListBox" HorizontalAlignment="Left" Height="253" Margin="10,10,0,0" VerticalAlignment="Top" Width="155" SelectionChanged="AbilityListBox_SelectionChanged">
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel>
+                                        <TextBlock Text="{Binding DisplayName}"/>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                        <Button x:Name="AddAbilityButton" Content="Add" HorizontalAlignment="Left" Margin="10,269,0,0" VerticalAlignment="Top" Width="75" Click="AddAbilityButton_Click"/>
+                        <Button x:Name="RemoveAbilityButton" Content="Remove" HorizontalAlignment="Left" Margin="90,268,0,0" VerticalAlignment="Top" Width="75" Click="RemoveAbilityButton_Click"/>
+                        <TextBox x:Name="AbilityIDTextBox" HorizontalAlignment="Left" Height="23" Margin="263,14,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                        <TextBox x:Name="AbilityInternalNameTextBox" HorizontalAlignment="Left" Height="23" Margin="263,45,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                        <Button x:Name="CancelAbilityButton" Content="Cancel" HorizontalAlignment="Left" Margin="421,268,0,0" VerticalAlignment="Top" Width="75"/>
+                        <Button x:Name="SaveAbilityButton" Content="Save" HorizontalAlignment="Left" Margin="341,268,0,0" VerticalAlignment="Top" Width="75" Click="SaveAbilityButton_Click"/>
+                        <TextBox x:Name="AbilityDisplayNameTextBox" HorizontalAlignment="Left" Height="23" Margin="263,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                        <TextBox x:Name="AbilityDescriptionTextBox" HorizontalAlignment="Left" Height="129" Margin="170,134,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="186" AutoWordSelection="True"/>
+                        <Label Content="Name:" HorizontalAlignment="Left" Margin="170,72,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.955,0"/>
+                        <Label Content="Internal Name:" HorizontalAlignment="Left" Margin="170,41,0,0" VerticalAlignment="Top"/>
+                        <Label Content="ID Number:" HorizontalAlignment="Left" Margin="170,10,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Description:" HorizontalAlignment="Left" Margin="170,103,0,0" VerticalAlignment="Top"/>
+
+                    </Grid>
+                </TabItem>
+                <TabItem x:Name="ConnectionsTab" Header="Connections">
+                    <Grid Background="#FFE5E5E5"/>
+                </TabItem>
+                <TabItem x:Name="EncountersTab" Header="Encounters">
+                    <Grid Background="#FFE5E5E5"/>
+                </TabItem>
+                <TabItem x:Name="ItemTab" Header="Items">
+                    <Grid Background="#FFE5E5E5">
+                        <ListBox x:Name="ItemListBox" HorizontalAlignment="Left" Height="253" Margin="10,10,0,0" VerticalAlignment="Top" Width="155"/>
+                        <Button x:Name="AddItemButton" Content="Add" HorizontalAlignment="Left" Margin="10,268,0,0" VerticalAlignment="Top" Width="75"/>
+                        <Button x:Name="RemoveItemButton" Content="Remove" HorizontalAlignment="Left" Margin="90,268,0,0" VerticalAlignment="Top" Width="75"/>
+                    </Grid>
+                </TabItem>
+                <TabItem Header="Metadata">
+                    <Grid Background="#FFE5E5E5"/>
+                </TabItem>
+                <TabItem Header="Moves">
+                    <Grid Background="#FFE5E5E5"/>
+                </TabItem>
+                <TabItem Header="Phone">
+                    <Grid Background="#FFE5E5E5"/>
+                </TabItem>
+                <TabItem Header="Pokémon">
+                    <Grid Background="#FFE5E5E5"/>
+                </TabItem>
+                <TabItem Header="Shadow Moves">
+                    <Grid Background="#FFE5E5E5"/>
+                </TabItem>
+                <TabItem Header="TMs">
+                    <Grid Background="#FFE5E5E5"/>
+                </TabItem>
+                <TabItem Header="Town Map">
+                    <Grid Background="#FFE5E5E5"/>
+                </TabItem>
+                <TabItem Header="Trainers Lists">
+                    <Grid Background="#FFE5E5E5"/>
+                </TabItem>
+                <TabItem Header="Trainers">
+                    <Grid Background="#FFE5E5E5"/>
+                </TabItem>
+                <TabItem Header="Trainer Types">
+                    <Grid Background="#FFE5E5E5"/>
+                </TabItem>
+                <TabItem Header="Pokémon Types">
+                    <Grid Background="#FFE5E5E5">
+                        <ListBox HorizontalAlignment="Left" Height="253" Margin="10,10,0,0" VerticalAlignment="Top" Width="155"/>
+                        <Button Content="Add" HorizontalAlignment="Left" Margin="10,268,0,0" VerticalAlignment="Top" Width="75"/>
+                        <Button Content="Remove" HorizontalAlignment="Left" Margin="90,268,0,0" VerticalAlignment="Top" Width="75"/>
+                        <Label Content="Name:" HorizontalAlignment="Left" Margin="170,10,0,0" VerticalAlignment="Top"/>
+                        <TextBox HorizontalAlignment="Left" Height="23" Margin="263,14,-15,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+                        <TextBox HorizontalAlignment="Left" Height="23" Margin="263,42,-15,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+                        <Label Content="Internal Name:" HorizontalAlignment="Left" Margin="170,38,0,0" VerticalAlignment="Top"/>
+                        <CheckBox Content="Is psuedo-type?" HorizontalAlignment="Left" Margin="170,70,0,0" VerticalAlignment="Top"/>
+                        <CheckBox Content="Is special type?" HorizontalAlignment="Left" Margin="170,90,0,0" VerticalAlignment="Top" ToolTip="If check, moves with this type will use the special stats for damage calculation."/>
+                        <Label Content="Weaknesses:" HorizontalAlignment="Left" Margin="170,110,0,0" VerticalAlignment="Top"/>
+                        <ListBox HorizontalAlignment="Left" Height="122" Margin="174,141,0,0" VerticalAlignment="Top" Width="100"/>
+                        <ListBox HorizontalAlignment="Left" Height="122" Margin="279,141,0,0" VerticalAlignment="Top" Width="100"/>
+                        <ListBox HorizontalAlignment="Left" Height="122" Margin="384,141,0,0" VerticalAlignment="Top" Width="100"/>
+                        <Label Content="Resistances:" HorizontalAlignment="Left" Margin="279,110,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Immunities:" HorizontalAlignment="Left" Margin="384,110,0,0" VerticalAlignment="Top"/>
+
+                    </Grid>
+                </TabItem>
+            </TabControl>
+        </StackPanel>
+    </Grid>
+</Window>

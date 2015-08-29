@@ -1,5 +1,8 @@
+import java.awt.*;
+import java.awt.event.*;
 import java.awt.EventQueue;
 
+import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JMenuBar;
 import javax.swing.JMenu;
@@ -7,10 +10,12 @@ import javax.swing.JMenuItem;
 import javax.swing.JSplitPane;
 import javax.swing.JList;
 import javax.swing.JPanel;
+import javax.swing.AbstractListModel;
 
-public class MainWindow {
+public class MainWindow implements ActionListener {
 
 	private JFrame frame;
+	JFileChooser fileChooser;
 
 	/**
 	 * Launch the application.
@@ -87,13 +92,32 @@ public class MainWindow {
 		splitPane.setBounds(0, 0, 624, 420);
 		frame.getContentPane().add(splitPane);
 		
-		JPanel panel = new JPanel();
-		splitPane.setRightComponent(panel);
+		JPanel workPanel = new JPanel();
+		splitPane.setRightComponent(workPanel);
+		
+		JPanel dataPanel = new JPanel();
+		splitPane.setLeftComponent(dataPanel);
 		
 		JList list = new JList();
-		panel.add(list);
+		dataPanel.add(list);
+		list.setModel(new AbstractListModel() {
+			String[] values = new String[] {"Abilities", "Connections", "Encounters", "Items", "Metadata", "Moves", "Phone", "Shadow Moves", "TMs", "Town Map", "Trainer Lists", "Trainers", "Trainer Types", "Types"};
+			public int getSize() {
+				return values.length;
+			}
+			public Object getElementAt(int index) {
+				return values[index];
+			}
+		});
+	}
+
+	private void openFolder() {
 		
-		JPanel panel_1 = new JPanel();
-		splitPane.setLeftComponent(panel_1);
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent arg0) {
+		if (e.getSource() == )
+		
 	}
 }
