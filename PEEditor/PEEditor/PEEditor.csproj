@@ -69,15 +69,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Item.cs" />
+    <Compile Include="Data Objects\Item.cs" />
+    <Compile Include="Main Window Files\MainWindow_PokemonTypes.cs" />
+    <Compile Include="Main Window Files\MainWindow_Items.cs" />
+    <Compile Include="Main Window Files\MainWindow_Pokemon.cs" />
     <Compile Include="ObservableList.cs" />
+    <Compile Include="Data Objects\Pokemon.cs" />
     <Compile Include="RecentFileList.cs" />
     <Compile Include="ViewModelBase.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="Ability.cs" />
+    <Compile Include="Data Objects\Ability.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -88,7 +92,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PokemonType.cs" />
+    <Compile Include="Data Objects\PokemonType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

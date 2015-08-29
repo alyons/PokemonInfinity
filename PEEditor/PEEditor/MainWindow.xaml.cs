@@ -24,8 +24,8 @@ namespace PEEditor
     {
         #region Variables
         private String folderPath;
-        private List<PokemonType> pokemonTypes;
         bool[] successfullyLoaded = new bool[15];
+        ObservableList<PokemonType> pokemonTypes = new ObservableList<PokemonType>();
 
         #region File Names
         private String abilityFileName = "\\abilities.txt";
@@ -65,7 +65,8 @@ namespace PEEditor
 
             RecentFileList.MenuClick += (s, e) =>
             {
-                OpenFiles(e.Filepath);
+                folderPath = e.Filepath;
+                OpenFiles(folderPath);
             };
 
             init();
@@ -74,7 +75,11 @@ namespace PEEditor
         private void init()
         {
             AbilityListBox.ItemsSource = new ObservableList<Ability>();
-            pokemonTypes = new List<PokemonType>();
+            pokemonTypes = new ObservableList<PokemonType>();
+            PokemonTypeListBox.ItemsSource = pokemonTypes;
+            PTypeImmunityListBox.ItemsSource = pokemonTypes;
+            PTypeResistanceListBox.ItemsSource = pokemonTypes;
+            PTypeWeaknessListBox.ItemsSource = pokemonTypes;
         }
         #endregion
         #region Closing
@@ -179,13 +184,18 @@ namespace PEEditor
         #endregion
 
         #region Helper Methods
+        #region Loading Methods
         public void OpenFiles(string folderPath)
         {
             // TO-DO: Check if the folder has the appropriate data (i.e. check for the files)
 
             RecentFileList.InsertFile(folderPath);
 
-            #region Load Abilities
+            LoadAbilities();
+            LoadPokemonTypes();
+        }
+        public void LoadAbilities()
+        {
             try
             {
                 string[] abilityLines = File.ReadAllLines(AbilitiesFilePath);
@@ -199,8 +209,9 @@ namespace PEEditor
             {
                 System.Windows.Forms.MessageBox.Show("Failed to load abilities: " + ex.Message);
             }
-            #endregion
         }
+        #endregion
+        #region Saving Methods
         public void SaveAllFiles()
         {
             SaveAbilities();
@@ -230,6 +241,7 @@ namespace PEEditor
                 System.Windows.Forms.MessageBox.Show("The abilities were not loaded successfully. Cancelling save...");
             }
         }
+        #endregion
         #endregion
     }
 }
