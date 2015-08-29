@@ -1,5 +1,10 @@
 # See the documentation on the wiki to learn how to edit this file.
 #-------------------
+RIVAL1
+Blue,3
+2
+EEVEE,5,TACKLE,TAILWHIP,,,3,,,,,,,,,,
+#-------------------
 CAMPER
 Liam
 2
