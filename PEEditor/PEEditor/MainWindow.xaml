@@ -3,6 +3,23 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:tmd="clr-namespace:TalkerMakerDeluxe"
         Title="MainWindow" MinWidth="618" MinHeight="360" Width="618" Height="360">
+    <Window.Resources>
+        <DataTemplate x:Key="PokemonTypeDataTemplate">
+            <StackPanel>
+                <TextBlock Text="{Binding Name}"/>
+            </StackPanel>
+        </DataTemplate>
+        <DataTemplate x:Key="PokemonDataTemplate">
+            <StackPanel>
+                <TextBlock>
+                    <Run Text="["/>
+                    <Run Text="{Binding NationalDex}"/>
+                    <Run Text="]: "/>
+                    <Run Text="{Binding Name}"/>
+                </TextBlock>
+            </StackPanel>
+        </DataTemplate>
+    </Window.Resources>
     <Grid>
         <StackPanel Orientation="Vertical" Margin="0,0,0,0">
             <Menu IsMainMenu="True">
@@ -66,7 +83,25 @@
                     <Grid Background="#FFE5E5E5"/>
                 </TabItem>
                 <TabItem Header="Pokémon">
-                    <Grid Background="#FFE5E5E5"/>
+                    <Grid Background="#FFE5E5E5">
+                        <ScrollViewer>
+                            <Grid>
+                                <ComboBox x:Name="PokemonComboBox" HorizontalAlignment="Left" 
+                                  Margin="10,10,0,0" VerticalAlignment="Top" 
+                                  Width="155" ItemTemplate="{StaticResource PokemonDataTemplate}"
+                                  TextSearch.TextPath="Name" IsEditable="True"/>
+                                <Label Content="Name: " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,37,0,0" />
+                                <Label Content="Internal Name:" HorizontalAlignment="Left" Margin="10,69,0,0" VerticalAlignment="Top"/>
+                                <Label Content="Type 1:" HorizontalAlignment="Left" Margin="10,101,0,0" VerticalAlignment="Top"/>
+                                <ComboBox HorizontalAlignment="Left" Margin="63,105,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="-0.017,-0.455"/>
+                                <Label Content="Type 2:" HorizontalAlignment="Left" Margin="188,105,0,0" VerticalAlignment="Top"/>
+                                <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="241,105,0,0"/>
+                                <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="63,41,0,0"/>
+                                <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="103,73,0,0"/>
+                                <Button Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="366,105,0,0"/>
+                            </Grid>
+                        </ScrollViewer>
+                    </Grid>
                 </TabItem>
                 <TabItem Header="Shadow Moves">
                     <Grid Background="#FFE5E5E5"/>
@@ -88,15 +123,10 @@
                 </TabItem>
                 <TabItem Header="Pokémon Types">
                     <Grid Background="#FFE5E5E5">
-                        <ListBox x:Name="PokemonTypeListBox" HorizontalAlignment="Left" Height="253" Margin="10,10,0,0" VerticalAlignment="Top" Width="155" SelectionChanged="PokemonTypeListBox_SelectionChanged">
-                            <ListBox.ItemTemplate>
-                                <DataTemplate>
-                                    <StackPanel>
-                                        <TextBlock Text="{Binding Name}"/>
-                                    </StackPanel>
-                                </DataTemplate>
-                            </ListBox.ItemTemplate>
-                        </ListBox>
+                        <ListBox x:Name="PokemonTypeListBox" HorizontalAlignment="Left" 
+                                 Height="253" Margin="10,10,0,0" VerticalAlignment="Top" 
+                                 Width="155" SelectionChanged="PokemonTypeListBox_SelectionChanged"
+                                 ItemTemplate="{StaticResource PokemonTypeDataTemplate}" />
                         <Button Content="Add" HorizontalAlignment="Left" Margin="10,268,0,0" VerticalAlignment="Top" Width="75"/>
                         <Button Content="Remove" HorizontalAlignment="Left" Margin="90,268,0,0" VerticalAlignment="Top" Width="75"/>
                         <Label Content="Name:" HorizontalAlignment="Left" Margin="170,10,0,0" VerticalAlignment="Top"/>
@@ -106,33 +136,18 @@
                         <CheckBox x:Name="PTypePseudoCheckBox" Content="Is psuedo-type?" HorizontalAlignment="Left" Margin="170,70,0,0" VerticalAlignment="Top"/>
                         <CheckBox x:Name="PTypeSpecialCheckBox" Content="Is special type?" HorizontalAlignment="Left" Margin="170,90,0,0" VerticalAlignment="Top" ToolTip="If check, moves with this type will use the special stats for damage calculation."/>
                         <Label Content="Weaknesses:" HorizontalAlignment="Left" Margin="170,110,0,0" VerticalAlignment="Top"/>
-                        <ListBox x:Name="PTypeWeaknessListBox" HorizontalAlignment="Left" Height="122" Margin="174,141,0,0" VerticalAlignment="Top" Width="100" SelectionMode="Multiple">
-                            <ListBox.ItemTemplate>
-                                <DataTemplate>
-                                    <StackPanel>
-                                        <TextBlock Text="{Binding Name}"/>
-                                    </StackPanel>
-                                </DataTemplate>
-                            </ListBox.ItemTemplate>
-                        </ListBox>
-                        <ListBox x:Name="PTypeResistanceListBox" HorizontalAlignment="Left" Height="122" Margin="279,141,0,0" VerticalAlignment="Top" Width="100" SelectionMode="Multiple">
-                            <ListBox.ItemTemplate>
-                                <DataTemplate>
-                                    <StackPanel>
-                                        <TextBlock Text="{Binding Name}"/>
-                                    </StackPanel>
-                                </DataTemplate>
-                            </ListBox.ItemTemplate>
-                        </ListBox>
-                        <ListBox x:Name="PTypeImmunityListBox" HorizontalAlignment="Left" Height="122" Margin="384,141,0,0" VerticalAlignment="Top" Width="100" SelectionMode="Multiple">
-                            <ListBox.ItemTemplate>
-                                <DataTemplate>
-                                    <StackPanel>
-                                        <TextBlock Text="{Binding Name}"/>
-                                    </StackPanel>
-                                </DataTemplate>
-                            </ListBox.ItemTemplate>
-                        </ListBox>
+                        <ListBox x:Name="PTypeWeaknessListBox" HorizontalAlignment="Left" 
+                                 Height="122" Margin="174,141,0,0" VerticalAlignment="Top" 
+                                 Width="100" SelectionMode="Multiple"
+                                 ItemTemplate="{StaticResource PokemonTypeDataTemplate}" />
+                        <ListBox x:Name="PTypeResistanceListBox" HorizontalAlignment="Left" 
+                                 Height="122" Margin="279,141,0,0" VerticalAlignment="Top" 
+                                 Width="100" SelectionMode="Multiple"
+                                 ItemTemplate="{StaticResource PokemonTypeDataTemplate}" />
+                        <ListBox x:Name="PTypeImmunityListBox" HorizontalAlignment="Left" 
+                                 Height="122" Margin="384,141,0,0" VerticalAlignment="Top" 
+                                 Width="100" SelectionMode="Multiple"
+                                 ItemTemplate="{StaticResource PokemonTypeDataTemplate}" />
                         <Label Content="Resistances:" HorizontalAlignment="Left" Margin="279,110,0,0" VerticalAlignment="Top"/>
                         <Label Content="Immunities:" HorizontalAlignment="Left" Margin="384,110,0,0" VerticalAlignment="Top"/>
 

@@ -25,18 +25,28 @@ namespace PEEditor
 
         #region Properties
         String PokemonFilePath { get { return folderPath + pokemonFileName; } }
+        //ObservableList<Pokemon>
         #endregion
 
         #region Methods
+        private void InitializePokemon()
+        {
+            
+        }
+
         private void LoadPokemon()
         {
             List<String> data = new List<String>();
             data.AddRange(File.ReadAllLines(PokemonFilePath));
-            List<int> indecies = new List<int>();
-            for (int i = 1; i < data.Count; i++)
-                if (data[i].StartsWith("["))
-                    indecies.Add(i);
-            
+            int lastIndex = 0;
+            for (int i = 0; i < data.Count; i++)
+            {
+                if ((data[i].StartsWith("[") && i != 0) || i == data.Count - 1)
+                {
+                    pokemon.Add(new Pokemon(data.GetRange(lastIndex, i - lastIndex)));
+                    lastIndex = i;
+                }
+            }
         }
         #endregion
     }

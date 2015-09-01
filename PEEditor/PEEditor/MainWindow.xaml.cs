@@ -25,7 +25,9 @@ namespace PEEditor
         #region Variables
         private String folderPath;
         bool[] successfullyLoaded = new bool[15];
+        ObservableList<Ability> abilities = new ObservableList<Ability>();
         ObservableList<PokemonType> pokemonTypes = new ObservableList<PokemonType>();
+        ObservableList<Pokemon> pokemon = new ObservableList<Pokemon>();
 
         #region File Names
         private String abilityFileName = "\\abilities.txt";
@@ -74,12 +76,17 @@ namespace PEEditor
 
         private void init()
         {
-            AbilityListBox.ItemsSource = new ObservableList<Ability>();
+            abilities = new ObservableList<Ability>();
             pokemonTypes = new ObservableList<PokemonType>();
+            moves = new ObservableList<Move>();
+            pokemon = new ObservableList<Pokemon>();
+
+            AbilityListBox.ItemsSource = abilities;
             PokemonTypeListBox.ItemsSource = pokemonTypes;
             PTypeImmunityListBox.ItemsSource = pokemonTypes;
             PTypeResistanceListBox.ItemsSource = pokemonTypes;
             PTypeWeaknessListBox.ItemsSource = pokemonTypes;
+            PokemonComboBox.ItemsSource = pokemon;
         }
         #endregion
         #region Closing
@@ -193,6 +200,8 @@ namespace PEEditor
 
             LoadAbilities();
             LoadPokemonTypes();
+            LoadMoves();
+            LoadPokemon();
         }
         public void LoadAbilities()
         {
