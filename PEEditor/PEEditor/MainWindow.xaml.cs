@@ -200,7 +200,7 @@ namespace PEEditor
 
             LoadAbilities();
             LoadPokemonTypes();
-            LoadMoves();
+            //LoadMoves();
             LoadPokemon();
         }
         public void LoadAbilities()

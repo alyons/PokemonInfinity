@@ -573,7 +573,7 @@
 573,CHARIZARDITEX,Charizardite X,1,1000,"One of the mysterious Mega Stones. Have Charizard hold it, and this stone will enable it to Mega Evolve in battle.",0,0,0,
 574,CHARIZARDITEY,Charizardite Y,1,1000,"One of the mysterious Mega Stones. Have Charizard hold it, and this stone will enable it to Mega Evolve in battle.",0,0,0,
 575,LUCARIONITE,Lucarionite,1,1000,"One of the mysterious Mega Stones. Have Lucario hold it, and this stone will enable it to Mega Evolve in battle.",0,0,0,
-576,ABILITYCAPSULE,Ability Capsule,1,2000,"A capsule that allows a Pokémon with two Abilities to switch between these Abilities when it is used.",1,0,0
+576,ABILITYCAPSULE,Ability Capsule,1,2000,"A capsule that allows a Pokémon with two Abilities to switch between these Abilities when it is used.",1,0,0,
 577,TM96,TM96,4,3000,"An attack that makes use of nature's power. Its effects vary depending on the user's environment.",3,0,0,NATUREPOWER
 578,TM97,TM97,4,3000,"The user releases a horrible aura imbued with dark thoughts. It may also make the target flinch.",3,0,0,DARKPULSE
 579,TM98,TM98,4,3000,"Striking opponents over and over makes the user's fists harder. Hitting a target raises the Attack stat.",3,0,0,POWERUPPUNCH
@@ -595,3 +595,4 @@
 595,SNOWBALL,Snowball,1,200,"An item to be held by a Pokémon. It boosts Attack if hit with an Ice-type attack. It can only be used once.",0,0,0,
 596,SAFETYGOGGLES,Safety Goggles,1,1000,"An item to be held by a Pokémon. These goggles protect the holder from both weather-related damage and powder.",0,0,0,
 597,OAKSPARCEL,Oak's Parcel,8,0,"A package addressed to Professor Oak.",0,0,0,
+598,HIDDENABILITYCAPSULE,H.A. Capsule,1,25000,"A capsule that allows a Pokémon to unlock it's hidden Abilities when it is used.",1,0,0,
